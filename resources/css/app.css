@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+    --base-yellow:#ffe494;
+    --base-black:#020202;
+    --base-brown:#564105;
+    --neutral-100:#F9F5F5;
+    --neutral-200:#e1dcdc;
+    --neutral-300:#7d7979;
+    --neutral-400:#2b2a2a;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html{
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+    height: 5000px;
+}
+
+/* NAVBAR */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: var(--base-black);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+.navbar a{
+    text-decoration: none;
+    color: inherit;
+    color: var(--neutral-200);
+}
+
+.navbar .navbar-menu a{
+    color:var(--neutral-300);
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+
+
+    padding : 0.5rem 0.8rem;
+    border-radius: 20px;
+}
+
+.navbar-menu a:hover{
+    background-color: var(--base-brown);
+    color: var(--base-black);
+}
+
+.active {
+    background-color: var(--base-yellow);
+
+}
+
+.navbar-extra{
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+#hamburger-menu{
+    display: none;
+}
+/* END OF NAVBAR */
+/* HERO SECTION */
+
+.hero-section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("./component/hero-image.png");
+    background-size: cover;
+    background-position: center;
+    position: relative  ;
+    margin-top: 10rem;
+    padding: 10rem;
+} 
+
+.hero-section .hero-description{
+    flex-grow: 1;
+    padding: 0 8.5rem 0 0;
+    
+}
+.hero-section .hero-description h1{
+    color: var(--neutral-100);
+    font-size: 4rem;
+    line-height: 5rem;
+    padding-bottom: 2rem;
+}
+.hero-section .hero-description span{
+    color: var(--base-yellow);
+}
+.hero-section .hero-description p{
+    color: var(--neutral-100);
+    font-size: 1.5rem;
+    padding-right: 5rem;
+}
+.hero-section .hero-description .product-button a{
+    margin: 1rem 1.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11rem;
+    font-size: 1rem;
+    background-color: var(--base-yellow);
+    color: var(--base-black);
+    border-radius: 40px;
+}
+.hero-section .hero-description .search-logo{
+    margin: 0 0.5rem;
+}
+.hero-section .hero-product{
+    flex-grow: 1;
+}
+.hero-section .hero-product img{
+    width: 31rem;
+}
+@media(max-width:1366px){
+    html{
+        font-size: 75%;
+    }
+}
+
+/* tablet */
+
+@media(max-width:750px){
+    html{
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu{
+        display: inline-block;
+    }
+    
+    .navbar .navbar-extra{
+    display: flex;
+    }
+
+    .navbar .navbar-menu{
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        background-color: var(--neutral-400);
+        width:30rem;
+        height:100vh;
+        display: block;
+        transition: 0.5s ease-in;
+    }
+    .navbar .navbar-menu.active{
+        left: 0%;
+    }
+    .navbar .navbar-menu a{
+        display: block;
+        margin: 1.3rem;
+        padding: 0.8rem;
+        font-size: 2rem;
+    }
+    .navbar-menu a:hover{
+        background-color: var(--base-brown);
+        color: var(--base-black);
+    }
+}

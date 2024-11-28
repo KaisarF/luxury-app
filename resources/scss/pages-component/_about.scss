@@ -1,0 +1,81 @@
+@use "../components/variable" as variable;
+
+.about-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 7rem;
+    background-image:url("/public/image/hero-image.png");
+    background-size: cover;
+    background-position: center;
+    position: relative  ;
+    &-content{
+        background-image: url("/public/image/about-decor.png");
+        background-size: contain ;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        position: relative;
+        padding: 5rem 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        
+        h1{
+            background: var(--Gold-200, linear-gradient(161deg, #B1840F 25.85%, #C7AB26 37.53%, #E8D85F 46.2%, #FFCA0D 57.12%, #E8D861 66.92%, #E7C239 75.96%, #8A4E00 98.19%));
+            background-clip: text;
+            -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+        p{
+            color: variable.$white200;
+            margin: 4rem 0;
+            text-align: center;
+            font-size: 1.3rem;
+        }
+        a{
+            padding: 1rem 2rem;
+            width: 224px;
+            border-radius: 40px;
+            border-radius: 40px;
+            background: var(--Gold-300, linear-gradient(196deg, #D5AF4A -0.4%, #F2E983 45.62%, #F2E983 72.56%, #D5B14B 97.97%));
+            box-shadow: 0px 1px 4px 0px #B5983B inset;
+            color: variable.$black;
+            text-decoration: none;
+            text-align: center;
+        }
+    }
+    @media(max-width:variable.$mac-bkp){
+        padding: 4rem 5rem;
+        &-content{
+            padding: 5rem 15rem;
+        }
+    }
+    @media(max-width: variable.$laptop-container){
+        padding: 2rem 3rem;
+        &-content{
+            padding: 2rem 10rem;
+            p{
+                font-size: 1rem;
+                margin: 2rem 0;
+            }
+            
+        }
+    }
+    @media(max-width:variable.$tablet-bkp){
+        &-content{
+            padding: 2rem 5rem;
+            
+        }
+    }
+    @media(max-width:variable.$mobile-bkp){
+        &-content{
+            padding: 2rem;
+            
+        }
+    }
+    
+}

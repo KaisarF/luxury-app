@@ -1,0 +1,52 @@
+@use "../components/variable" as variable;
+
+.testimoni-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 10rem;
+    margin-top: 2rem;
+    gap:2rem;
+    &-header{
+        text-align: center;
+    }
+    &-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.3rem;
+        img{
+            width: 80%;
+        }
+    }
+    a{
+        padding: 2rem 4rem;
+        background-color: variable.$black;
+        color: variable.$white200;
+        border-radius: 50px;
+    }
+    @media(max-width: variable.$zoom125-container){
+        padding: 1rem 7rem;
+        &-content{
+            img{
+                width: 40%;
+            }
+        }
+
+    }
+    @media(max-width: variable.$big-tablet-bkp){
+        padding: 1rem 5rem;
+        &-content{
+            img{
+                width: 60%;
+            }
+            .image2{
+                display: none;
+            }
+        }
+        a{
+            padding: 1rem 2rem;
+        }
+    }
+}

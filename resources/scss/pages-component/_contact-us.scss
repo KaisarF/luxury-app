@@ -1,0 +1,69 @@
+@use "../components/variable" as variable;
+
+.contactUs-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 15rem;
+    gap:2rem;
+    background-image: url("/public/image/hero-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    &-image{
+        flex-grow: 1;
+        // width: 40%;
+    }
+    &-content{
+        flex-grow: 3;
+        // width: 60%;
+        color: variable.$white200;
+        h1{
+            color: variable.$white100;
+            span{
+                color: variable.$yellow;
+            }
+        }
+        p{
+            line-height: 2;
+            margin: 2rem 0;
+            padding-right: 10rem;
+        }
+        a{
+            color: variable.$white200;
+            background-color: variable.$green;
+            text-decoration: none;
+            padding: 1.4rem 1rem;
+            border-radius: 14px;
+        }
+    }
+    @media(max-width:variable.$mac-bkp){
+        padding: 1rem 10rem;
+        &-content{
+            p{
+                padding-right: 5rem;
+            }
+        }
+    }
+    @media(max-width:variable.$laptop-bkp){
+        padding: 1rem 5rem;
+        &-content{
+            p{
+                padding-right: 5rem;
+            }
+        }
+    }
+    @media(max-width: variable.$big-tablet-bkp){
+        padding: 1rem 5rem;
+        flex-direction: column;
+    }
+    @media(max-width:variable.$tablet-container){
+        &-image{
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
