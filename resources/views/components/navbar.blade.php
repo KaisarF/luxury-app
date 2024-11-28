@@ -4,9 +4,9 @@
         <img src="image/logo.svg" >
     </a>
     
-    <div class="navbar-menu">
-        <a href="/" class="glow">beranda</a>
-        <a href="#" >mengapa kami?</a>
+    <div class="navbar-menu">  
+        <a href="/" class="{{ Request::is('/') ? 'glow' : '' }}" >beranda</a>
+        <a href="/about-us" class="{{ Request::is('about-us') ? 'glow' : ''}}"  >mengapa kami?</a>
         <a href="#" >tentang kami</a>
         <a href="#" >carakerja</a>
         <a href="#" >FAQ</a>

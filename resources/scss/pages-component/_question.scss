@@ -1,0 +1,73 @@
+@use '../components/variable' as variable;
+
+.question-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 10rem;
+    &-header{
+        padding: 2rem 15rem;
+        p{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+    &-content{
+        border: variable.$yellow 2px solid;
+        border-radius: 1rem;
+        width: 100%;
+        padding: 5rem;
+        
+    }
+    
+}
+.answer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 10rem;
+    &-header{
+        padding: 2rem 15rem;
+        p{
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+    &-content{
+        border: variable.$yellow 2px solid;
+        border-radius: 1rem;
+        width: 100%;
+        padding: 5rem;
+        &-reason{
+            display: flex;
+            flex-direction:row;
+            gap: 1rem;
+            padding: 3rem 1rem;
+            img{
+                flex-grow: 2;
+                width: 25rem;
+            }
+            .reason-option{
+                flex-grow: 5;    
+                background-color: variable.$white300;
+                padding: 2rem;
+                border-radius: 20px;
+                ul{
+                    li{
+                        font-size: 1.4rem;
+                        text-align:left ;
+                        margin-bottom: 1rem;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

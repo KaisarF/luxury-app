@@ -4,7 +4,13 @@
 
 @section('content')
     @include('components.navbar')
-    @include('pages.pages-component.home.hero')
+
+    {{-- hero section --}}
+    @section('header', 'Cek Keaslian Barang dengan')
+    @section('headerSpan', ' Luxury Checker')
+    @section('hero-image', 'image/phone.png')
+    @include('components.hero')
+
     @include('pages.pages-component.home.reason')
     @include('pages.pages-component.home.about')
     @include('pages.pages-component.home.how-it-work')
