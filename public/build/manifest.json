@@ -1,0 +1,27 @@
+{
+  "public/image/about-decor.png": {
+    "file": "assets/about-decor-Bg4_zGkI.png",
+    "src": "public/image/about-decor.png"
+  },
+  "public/image/fun-fact-bg.png": {
+    "file": "assets/fun-fact-bg-CX6KYWJA.png",
+    "src": "public/image/fun-fact-bg.png"
+  },
+  "public/image/hero-image-mobile.png": {
+    "file": "assets/hero-image-mobile-B3FC-q8g.png",
+    "src": "public/image/hero-image-mobile.png"
+  },
+  "public/image/hero-image.png": {
+    "file": "assets/hero-image-Cim-ampx.png",
+    "src": "public/image/hero-image.png"
+  },
+  "public/image/phone.png": {
+    "file": "assets/phone-Bq6Vynhc.png",
+    "src": "public/image/phone.png"
+  },
+  "resources/scss/landing.scss": {
+    "file": "assets/landing-CgFVSYD3.css",
+    "src": "resources/scss/landing.scss",
+    "isEntry": true
+  }
+}
