@@ -6,6 +6,7 @@
     margin-top: 2rem;
     padding: 2rem 15rem;
     flex-direction: column;
+    color: variable.$black;
     &-header{
         h1{
             text-align: center;
@@ -30,7 +31,7 @@
                 color: variable.$brown;
             }
             p{
-                color: variable.$white300;
+                color: variable.$white600;
             }
             .image-wrapper{
                 display: flex;

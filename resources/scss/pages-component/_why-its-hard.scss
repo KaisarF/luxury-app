@@ -1,0 +1,78 @@
+@use "../components/variable" as variable;
+
+.why-its-hard-container{
+    background-image: url("/public/image/hero-image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px;
+    text-align: center;
+    color: variable.$white200;
+    &-header{
+        padding: 0 10rem;
+    }
+    &-content{
+        padding:0 5rem;
+        .swiper {
+            width: 60rem;
+            height: auto;
+            &-wrapper{
+                
+                width: 100%;
+                .swiper-slide{
+                    padding: 5rem;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            &-pagination{
+                &-bullet{
+                    
+                    background-color: variable.$white100;
+                }
+            }
+            &-button-prev{
+                color: variable.$white100;
+            }
+            &-button-next{
+                color: variable.$white100;
+            }
+        }
+    }
+    @media(max-width: variable.$laptop-container ){
+        padding: 75px;
+        &-header{
+            padding: 0 20vw;
+        }
+        &-content{
+            padding: 0 2rem;
+            .swiper{
+                width: 80vw;
+            }
+        }
+    }
+    @media(max-width: variable.$big-tablet-container ){
+        padding: 50px;
+        &-header{
+            padding: 0 15vw;
+        }
+        &-content{
+            padding: 0;
+            .swiper{
+                width: 90vw;
+                &-wrapper{
+                
+                    width: 100%;
+                    .swiper-slide{
+                        padding: 7vw;
+                    }
+                }
+            }
+        }
+    }
+}
+

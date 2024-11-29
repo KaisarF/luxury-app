@@ -16,7 +16,8 @@
     @include('pages.pages-component.home.how-it-work')
     @include('pages.pages-component.home.testimoni')
     @include('pages.pages-component.home.faq')
-    @include('pages.pages-component.home.contact-us')
+    
+    @include('components.contact-us')
     @include('components.footer')
     {{-- @include('pages.pages-component.home.footer') --}}
 @endsection

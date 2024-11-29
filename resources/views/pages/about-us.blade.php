@@ -12,9 +12,10 @@
     @include('components.hero')
     
     @include('pages.pages-component.about-us.question')
+    @include('pages.pages-component.about-us.why-its-hard')
+    @include('pages.pages-component.about-us.fun-fact')
 
-
-    @include('pages.pages-component.home.contact-us')
+    @include('components.contact-us')
     @include('components.footer')
     
 @endsection

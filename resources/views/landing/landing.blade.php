@@ -40,8 +40,9 @@
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
 
     {{-- Swiper --}}
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+            
 
     {{-- Animate on Scroll --}}
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css"
@@ -83,7 +84,32 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     {{-- Swiper --}}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+  // Optional parameters
+    //   direction: 'vertical',
+    //   loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+    </script>
 
     @stack('script')
 
